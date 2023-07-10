@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.eviden.onecloud</groupId>
-    <artifactId>emp-app-crd</artifactId>
+    <artifactId>registration-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>emp-app-crd</name>
-    <description>emp-app-crd</description>
+    <name>registration-api</name>
+    <description>registration-api</description>
     <properties>
         <java.version>11</java.version>
     </properties>
