@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: idea-api
+  name: registration-api
 spec:
   replicas: 1
   podManagementPolicy: "Parallel"
-  serviceName: "idea-api"
+  serviceName: "registration-api"
   selector:
     matchLabels:
-      app: idea-api
+      app: registration-api
   template:
     metadata:
       labels:
-        app: idea-api
+        app: registration-api
     spec:
 #      serviceAccountName: oedp-sa
       terminationGracePeriodSeconds: 60
       containers:
-        - name: idea-api
-          image: eventdrivendev01.aws.io/idea-api:latest
+        - name: registration-api
+          image: eventdrivendev01.aws.io/registration-api:latest
           resources:
             requests:
               memory: "256Mi"
