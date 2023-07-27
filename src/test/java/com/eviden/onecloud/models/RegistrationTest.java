@@ -89,63 +89,6 @@ class RegistrationTest {
     }
 
     /**
-     * Methods under test:
-     *
-     * <ul>
-     *   <li>{@link Registration#Registration(Long, String, List, Integer, List, String)}
-     *   <li>{@link Registration#setAvailability(String)}
-     *   <li>{@link Registration#setRegistrationId(Long)}
-     *   <li>{@link Registration#setRole(List)}
-     *   <li>{@link Registration#setSkills(List)}
-     *   <li>{@link Registration#setTitle(String)}
-     *   <li>{@link Registration#setTotalYearOfExperience(Integer)}
-     *   <li>{@link Registration#toString()}
-     *   <li>{@link Registration#getAvailability()}
-     *   <li>{@link Registration#getRegistrationId()}
-     *   <li>{@link Registration#getRole()}
-     *   <li>{@link Registration#getSkills()}
-     *   <li>{@link Registration#getTitle()}
-     *   <li>{@link Registration#getTotalYearOfExperience()}
-     * </ul>
-     */
-    @Test
-    void testConstructor2() {
-        // Arrange
-        ArrayList<String> role = new ArrayList<>();
-        ArrayList<String> skills = new ArrayList<>();
-
-        // Act
-        Registration actualRegistration = new Registration(1L, "Dr", role, 1, skills, "Availability");
-        actualRegistration.setAvailability("Availability");
-        actualRegistration.setRegistrationId(1L);
-        ArrayList<String> role2 = new ArrayList<>();
-        actualRegistration.setRole(role2);
-        ArrayList<String> skills2 = new ArrayList<>();
-        actualRegistration.setSkills(skills2);
-        actualRegistration.setTitle("Dr");
-        actualRegistration.setTotalYearOfExperience(1);
-        String actualToStringResult = actualRegistration.toString();
-
-        // Assert that nothing has changed
-        assertEquals("Availability", actualRegistration.getAvailability());
-        assertEquals(1L, actualRegistration.getRegistrationId().longValue());
-        List<String> role3 = actualRegistration.getRole();
-        assertSame(role2, role3);
-        assertEquals(role, role3);
-        assertEquals(skills, role3);
-        List<String> skills3 = actualRegistration.getSkills();
-        assertEquals(skills3, role3);
-        assertSame(skills2, skills3);
-        assertEquals(role, skills3);
-        assertEquals(skills, skills3);
-        assertEquals(role2, skills3);
-        assertEquals("Dr", actualRegistration.getTitle());
-        assertEquals(1, actualRegistration.getTotalYearOfExperience().intValue());
-        assertEquals("Registration(registrationId=1, title=Dr, role=[], totalYearOfExperience=1, skills=[], availability"
-                + "=Availability)", actualToStringResult);
-    }
-
-    /**
      * Method under test: {@link Registration#equals(Object)}
      */
     @Test

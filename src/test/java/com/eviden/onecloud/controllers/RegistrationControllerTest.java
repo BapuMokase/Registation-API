@@ -82,10 +82,7 @@ class RegistrationControllerTest {
                 .perform(requestBuilder)
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType("application/json"))
-                .andExpect(MockMvcResultMatchers.content()
-                        .string(
-                                "{\"registrationId\":1,\"title\":\"Dr\",\"role\":[],\"totalYearOfExperience\":1,\"skills\":[],\"availability\":"
-                                        + "\"Availability\"}"));
+                .andExpect(MockMvcResultMatchers.content().string("{\"statusCode\":200,\"statusMessage\":\"Success\"}"));
     }
 }
 

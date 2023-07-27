@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 60
       containers:
         - name: registration-api
-          image: eventdrivendev01.aws.io/registration-api:latest
+          image: 837071794782.dkr.ecr.us-east-1.amazonaws.com/register-api-backend
           resources:
             requests:
               memory: "256Mi"
