@@ -5,12 +5,12 @@ server:
 # configure spring datasource and jpa with postgres using a database ?myDatabase? in localhost with username ?postgres? and password ?postgres?
 spring:
   datasource:
-    url: jdbc:postgresql://database-1.crgf0knajwzv.us-east-1.rds.amazonaws.com:5432/ideaportal
+    url: jdbc:postgresql://database-1.crgf0knajwzv.us-east-1.rds.amazonaws.com:5432/batchdb
     username: postgres1234
     password: mydatabasepassword
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
       hibernate:
       dialect: org.hibernate.dialect.PostgreSQLDialect
