@@ -26,10 +26,10 @@ WORKDIR /app
 RUN ls -la /app
 
 # Copy the built JAR file from the builder stage
-COPY --from=builder /build/target/*.jar /app/plantUML.jar
+COPY --from=builder /build/target/*.jar /app/registation.jar
 
 # Expose the necessary port (if running as a web server)
 EXPOSE 8080
 
 # Command to run the application
-CMD ["java", "-jar", "/app/plantUML.jar"]
+CMD ["java", "-jar", "/app/registation.jar"]
